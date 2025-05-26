@@ -1,5 +1,4 @@
-package tree
-
+package com.example.danettask.data
 
 /**
  * Node с названием, детьми и ссылкой на родителя
