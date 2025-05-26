@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.danettask.data.TreeRepositoryString
 
 @Composable
 fun Navigation() {
@@ -18,6 +19,8 @@ fun Navigation() {
 
             TreeScreen(
                 nodePath = nodePath,
+                root = TreeRepositoryString.root,
+                converter = TreeRepositoryString.converter,
                 onNavigateToChild = { newPath ->
                     navController.navigate(Routes.Tree(newPath))
                 },

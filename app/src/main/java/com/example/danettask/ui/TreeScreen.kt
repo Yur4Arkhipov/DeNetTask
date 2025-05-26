@@ -19,18 +19,20 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.danettask.R
-import com.example.danettask.data.TreeRepository
+import com.example.danettask.data.TreeNode
 import com.example.danettask.data.findNodeByPath
+import com.example.danettask.domain.TreeTypeConverter
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TreeScreen(
+fun <T> TreeScreen(
     nodePath: String,
+    root: TreeNode<T>,
+    converter: TreeTypeConverter<T>,
     onNavigateToChild: (String) -> Unit,
     onBack: () -> Unit
 ) {
-    val root = TreeRepository.root
-    val currentNode = root.findNodeByPath(nodePath)
+    val currentNode = root.findNodeByPath(nodePath) { converter.fromString(it) }
 
     Scaffold(
       topBar = {
@@ -40,7 +42,12 @@ fun TreeScreen(
                   if (nodePath != "root") {
                       IconButton(
                           onClick = { onBack() }
-                      ) { Icon(painter = painterResource(R.drawable.sharp_chevron_backward_24), contentDescription = null) }
+                      ) {
+                          Icon(
+                              painter = painterResource(R.drawable.sharp_chevron_backward_24),
+                              contentDescription = null
+                          )
+                      }
                   }
               }
           )
@@ -64,7 +71,7 @@ fun TreeScreen(
                         onNavigateToChild(newPath)
                     }
                 ) {
-                    Text(text = child.name)
+                    Text(child.name.toString())
                 }
             }
 
