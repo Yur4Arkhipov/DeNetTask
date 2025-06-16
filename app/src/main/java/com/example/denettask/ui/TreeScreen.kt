@@ -1,4 +1,4 @@
-package com.example.danettask.ui
+package com.example.denettask.ui
 
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -31,10 +31,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.danettask.R
-import com.example.danettask.data.TreeNode
-import com.example.danettask.data.findNodeByPath
-import com.example.danettask.domain.TreeTypeConverter
+import com.example.denettask.R
+import com.example.denettask.data.TreeNode
+import com.example.denettask.data.findNodeByPath
+import com.example.denettask.domain.TreeTypeConverter
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

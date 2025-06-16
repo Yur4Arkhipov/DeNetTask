@@ -1,4 +1,4 @@
-package com.example.danettask.domain
+package com.example.denettask.domain
 
 object IntTreeConverter : TreeTypeConverter<Int> {
     override fun fromString(value: String): Int? = value.toIntOrNull()

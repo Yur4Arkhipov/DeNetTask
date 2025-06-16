@@ -1,4 +1,4 @@
-package com.example.danettask.ui.theme
+package com.example.denettask.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

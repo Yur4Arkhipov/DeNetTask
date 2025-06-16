@@ -1,8 +1,8 @@
-package com.example.danettask
+package com.example.denettask
 
 import org.junit.Assert.assertEquals
 import org.junit.Test
-import com.example.danettask.data.TreeNode
+import com.example.denettask.data.TreeNode
 
 class TreeNodeUnitTest {
     val root = TreeNode("root")

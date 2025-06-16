@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.danettask"
+    namespace = "com.example.denettask"
     compileSdk = 35
 
     defaultConfig {

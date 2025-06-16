@@ -1,8 +1,8 @@
-package com.example.danettask.data
+package com.example.denettask.data
 
-import com.example.danettask.domain.IntTreeConverter
-import com.example.danettask.domain.StringTreeConverter
-import com.example.danettask.domain.TreeTypeConverter
+import com.example.denettask.domain.IntTreeConverter
+import com.example.denettask.domain.StringTreeConverter
+import com.example.denettask.domain.TreeTypeConverter
 
 object TreeRepositoryString {
     var root: TreeNode<String> = createTree()
