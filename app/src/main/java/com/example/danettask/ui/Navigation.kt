@@ -7,11 +7,11 @@ import androidx.navigation.compose.rememberNavController
 
 @Composable
 fun Navigation() {
-    val navController = rememberNavController()
+    val navHostController = rememberNavController()
 
     NavHost(
-        navController = navController,
-        startDestination = Routes.Tree(),
+        navController = navHostController,
+        startDestination = Routes.Tree("root"),
     ) {
         composable<Routes.Tree> { backStackEntry ->
             val nodePath = backStackEntry.arguments?.getString("nodePath") ?: "root"
@@ -19,13 +19,12 @@ fun Navigation() {
             TreeScreen(
                 nodePath = nodePath,
                 onNavigateToChild = { newPath ->
-                    navController.navigate(Routes.Tree(newPath))
+                    navHostController.navigate(Routes.Tree(newPath))
                 },
                 onBack = {
-                    navController.popBackStack()
+                    navHostController.popBackStack()
                 }
             )
         }
-
     }
 }

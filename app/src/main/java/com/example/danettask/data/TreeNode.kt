@@ -17,4 +17,9 @@ class TreeNode<T>(
         child.parent = this
         _children.add(child)
     }
+
+    fun removeChild(child: TreeNode<T>): Boolean {
+        child.parent = null
+        return _children.remove(child)
+    }
 }

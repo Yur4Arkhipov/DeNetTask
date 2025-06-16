@@ -13,9 +13,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             DaNetTaskTheme {
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
                 Navigation()
-//                }
             }
         }
     }
