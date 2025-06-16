@@ -1,10 +1,10 @@
-package com.example.danettask.ui
+package com.example.denettask.ui
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.danettask.data.TreeRepositoryString
+import com.example.denettask.data.TreeRepositoryString
 
 @Composable
 fun Navigation() {

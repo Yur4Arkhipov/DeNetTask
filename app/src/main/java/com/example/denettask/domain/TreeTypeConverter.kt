@@ -1,4 +1,4 @@
-package com.example.danettask.domain
+package com.example.denettask.domain
 
 interface TreeTypeConverter<T> {
     fun fromString(value: String): T?

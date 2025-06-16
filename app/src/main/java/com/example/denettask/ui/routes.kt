@@ -1,4 +1,4 @@
-package com.example.danettask.ui
+package com.example.denettask.ui
 
 import kotlinx.serialization.Serializable
 

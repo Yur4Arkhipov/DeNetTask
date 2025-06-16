@@ -1,4 +1,4 @@
-package com.example.danettask.data
+package com.example.denettask.data
 
 import androidx.compose.runtime.mutableStateListOf
 
