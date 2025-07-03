@@ -2,10 +2,9 @@ package com.example.denettask.domain.model
 
 import com.example.denettask.domain.utils.EthereumAddressGenerator
 
-
 class Node(
     val name: String,
-    val parent: Node?
+    var parent: Node?
 ) {
     private val _childs: MutableList<Node> = mutableListOf()
     val childs: List<Node> = _childs
