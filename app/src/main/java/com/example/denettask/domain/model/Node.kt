@@ -7,7 +7,7 @@ class Node(
     val name: String,
     private var parent: Node?
 ) {
-    private val _childs: MutableList<Node> = mutableStateListOf()
+    private val _childs = mutableStateListOf<Node>()
     val childs: List<Node> = _childs
 
     fun addChild(): Node {

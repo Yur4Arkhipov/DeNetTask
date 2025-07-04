@@ -35,7 +35,6 @@ class TreeViewModel @Inject constructor(
 
     fun onAddChild() {
         viewModelScope.launch {
-            _uiState.value = UiState.Loading
             current?.let {
                 addChild(it)
                 _uiState.value = UiState.Success(it)
