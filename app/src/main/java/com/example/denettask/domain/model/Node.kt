@@ -1,12 +1,13 @@
 package com.example.denettask.domain.model
 
+import androidx.compose.runtime.mutableStateListOf
 import com.example.denettask.domain.utils.EthereumAddressGenerator
 
 class Node(
     val name: String,
     private var parent: Node?
 ) {
-    private val _childs: MutableList<Node> = mutableListOf()
+    private val _childs: MutableList<Node> = mutableStateListOf()
     val childs: List<Node> = _childs
 
     fun addChild(): Node {
@@ -27,6 +28,7 @@ class Node(
     fun getParent(): Node? = parent
 
     fun addChildNode(child: Node) {
+        child.setParent(this)
         _childs.add(child)
     }
 
